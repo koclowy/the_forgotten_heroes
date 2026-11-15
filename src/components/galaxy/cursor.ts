@@ -9,14 +9,20 @@ import type { Content } from "../../content/load";
 
 type Cursor = { image: Scaled; hotspot: [number, number] };
 
+// The asset resolver builds URLs from import.meta.env.BASE_URL (here "./"), so a cursor path is
+// relative, e.g. "./assets/image/cursor/x1/idle.png". A CSS url() inside a custom property resolves
+// against the built CSS file (app/…), not the page, so under a sub-folder (GitHub Pages) it would
+// 404. Making it absolute against the page's base URI pins it to the real file under any base path.
+const abs = (u: string) => new URL(u, document.baseURI).href;
+
 /** url(x1) X Y, then image-set(x1 1x, x2 2x, x3 3x) X Y. Hotspot is in x1 pixels. */
 // x1 is exported at the on-screen size (npm run cursors), and image-set's 1x / 2x / 3x tell the
 // browser each file's density, so the cursor stays the same CSS size on 1×, 2× and 3× screens.
 function cursorValues(c: Cursor | undefined, fallback: string) {
   if (!c) return { plain: fallback, set: fallback };
   const [x, y] = c.hotspot.map((n) => Math.round(n));
-  const base = c.image.x1 ?? c.image.x2 ?? c.image.x3!;
-  const list = SCALES.filter((s) => c.image[s]).map((s) => `url("${c.image[s]}") ${SCALE_FACTOR[s]}x`);
+  const base = abs(c.image.x1 ?? c.image.x2 ?? c.image.x3!);
+  const list = SCALES.filter((s) => c.image[s]).map((s) => `url("${abs(c.image[s]!)}") ${SCALE_FACTOR[s]}x`);
   return {
     plain: `url("${base}") ${x} ${y}, ${fallback}`,
     set: `image-set(${list.join(", ")}) ${x} ${y}, ${fallback}`,
