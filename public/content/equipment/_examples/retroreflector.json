@@ -1,0 +1,50 @@
+{
+  "_help": "speaker: narrator (bottom panel) | scientist (Nova pops in; optional expression + body, see nova.json) | equipment (speech bubble). Add, delete or reorder lines freely. quiz.answer is the letter of the right option (A = first). image: no extension needed (jpg/png/webp all work); {x} = the x1/x2/x3 resolution folder. Optional \"voice\": a folder of mp3 blips just for this equipment, e.g. \"assets/mp3/vocal/retroreflector/\".",
+  "name": "Laser Ranging Retroreflector",
+  "image": "assets/image/equipment/{x}/retroreflector",
+  "greeting": "I am… a mirror panel left by Apollo 11. I still work today!",
+  "script": [
+    {
+      "speaker": "narrator",
+      "text": "Apollo 11 astronauts set up this panel of special mirrors on the Moon in July 1969."
+    },
+    {
+      "speaker": "equipment",
+      "text": "Shine a laser at me from Earth, and I'll bounce the light straight back to where it came from."
+    },
+    {
+      "speaker": "scientist",
+      "expression": "curious",
+      "body": "arm-down",
+      "text": "So we can time the light and work out how far away the Moon is?"
+    },
+    {
+      "speaker": "equipment",
+      "text": "Exactly, with amazing precision."
+    },
+    {
+      "speaker": "narrator",
+      "text": "These measurements show the Moon is slowly drifting away from Earth, by roughly 3.8 cm every year."
+    }
+  ],
+  "moreInfo": {
+    "image": "",
+    "text": "A retroreflector uses corner-cube prisms that always send light back in the direction it came from. Observatories on Earth still fire lasers at the Apollo reflectors and time the round trip to measure the Earth–Moon distance."
+  },
+  "quiz": {
+    "points": 10,
+    "questions": [
+      {
+        "question": "What have measurements using this equipment shown?",
+        "options": [
+          "The Moon is moving closer to Earth",
+          "The Moon is drifting away from Earth by about 3.8 cm a year",
+          "The Moon has stopped spinning",
+          "The Moon is hollow"
+        ],
+        "answer": "B",
+        "explanation": "Timing laser pulses bounced off the reflectors shows the Moon slowly moving away from us."
+      }
+    ]
+  }
+}

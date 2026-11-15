@@ -1,0 +1,143 @@
+{
+  "_help": "speaker: narrator (bottom panel) | scientist (Nova pops in; optional expression + body, see nova.json) | equipment (speech bubble). Add, delete or reorder lines freely. quiz.answer is the letter of the right option (A = first). image: the drawn art in the gold frame (no extension needed; {x} = the x1/x2/x3 folder). moreInfo.image: the real photo(s) in the \"i\" card, default assets/image/real_equipment/{x}/<id> (add <id>-1, <id>-2, … for a gallery); leave it empty to use the default. moreInfo.imageCredit: small credit under the photo. moreInfo.text: the summary paragraph. moreInfo.funFacts (optional): a list of short facts, one bullet each, e.g. [\"Fact one.\", \"Fact two.\"]. moreInfo.sources (optional): a list of web addresses (shown as the site name, e.g. NASA Science) or { \"label\": \"NASA Science: Viking 1\", \"url\": \"https://…\" }; links open in a new tab. Optional \"voice\": this equipment's voice file, e.g. assets/mp3/vocal/equipment/equipment_low_pitch (none = sounds.voices.equipment in assets.json). See README §4. Text formatting in any \"text\" or \"greeting\": <i>italic</i>, <b>bold</b>, <small>smaller</small>, <chorus>the other connected equipment speaking (own line, italic, smaller, faded, quieter voice)</chorus>, e.g. \"Hah, tell us about it. <chorus>Hmph… Can't believe them… We're still here! Still standing!</chorus>\". Optional \"chorusVoice\" on a line: another voice file for its <chorus> part. See README §2. Copy full examples from equipment/_examples/.",
+  "name": "Apollo Lunar Modules",
+  "image": "assets/image/equipment/{x}/apollo-lunar-modules.png",
+  "voice": "assets/mp3/vocal/equipment/equipment_low_pitch",
+  "greeting": "Well, hello there!!",
+  "script": [
+    {
+      "speaker": "equipment",
+      "text": "Well, hello there!!"
+    },
+    {
+      "speaker": "equipment",
+      "text": "I’m the Apollo 11 Lunar Module, also known as the Eagle! I was the first to land you humans on the moon, setting the stepping stones in place for everyone else!"
+    },
+    {
+      "speaker": "narrator",
+      "text": "In 1969, NASA launched Eagle inside the giant Saturn V rocket to win the Space Race and land the first people on the Moon."
+    },
+    {
+      "speaker": "narrator",
+      "text": "Eagle was made of very thin metal wrapped in shiny gold foil, and it was powered by six batteries and two rocket engines."
+    },
+    {
+      "speaker": "equipment",
+      "text": "I know, I’m so incredible. No need to clap, hahah~"
+    },
+    {
+      "speaker": "scientist",
+      "expression": "confused",
+      "body": "arm-down",
+      "text": "Well, if you’re so important, why are you… Still up here?"
+    },
+    {
+      "speaker": "equipment",
+      "text": "Huh?! I’ll have you know, I was the MOST important one on the team! After all, I got everyone home!"
+    },
+    {
+      "speaker": "narrator",
+      "text": "Its mission was to land Neil Armstrong and Buzz Aldrin on the Moon and fly them back up, so its bottom half became their launch pad and was left behind."
+    },
+    {
+      "speaker": "scientist",
+      "expression": "curious",
+      "body": "arm-down",
+      "text": "Did you manage to complete your mission?"
+    },
+    {
+      "speaker": "narrator",
+      "text": "Armstrong and Aldrin brought home 21.5 kg of Moon rocks and soil, which showed that the Moon’s flat dark areas were made by hot, melted lava long ago."
+    },
+    {
+      "speaker": "equipment",
+      "text": "Naturally, heh. Even after 57 years, I still stand strong!"
+    },
+    {
+      "speaker": "narrator",
+      "text": "Eagle launched from Florida, USA, on 16 July 1969 at 9:32 a.m., landed on the Moon about 384,000 km away on 20 July, and its bottom half has stayed there for 57 years."
+    },
+    {
+      "speaker": "scientist",
+      "expression": "surprised",
+      "body": "wave",
+      "text": "Wow, that’s a long time! If it were me, I’d be homesick!"
+    }
+  ],
+  "moreInfo": {
+    "image": "",
+    "imageCredit": "Photo: NASA",
+    "text": "The Apollo 11 Lunar Module, Eagle, was the first spacecraft to land people on the Moon. It launched on 16 July 1969 inside a Saturn V rocket and landed in the Sea of Tranquility on 20 July 1969. Neil Armstrong and Buzz Aldrin explored the surface, set up experiments and collected Moon rocks. Then Eagle’s top half carried them back to Michael Collins in orbit, while its bottom half stayed behind on the Moon, where it still is today.",
+    "funFacts": [
+      "Eagle had no seats. Armstrong and Aldrin flew it standing up, like passengers on a bus!",
+      "With all its fuel, Eagle weighed about 15,100 kg, about as heavy as two or three elephants.",
+      "During landing, the computer flashed warning alarms and Armstrong had to steer past a field of boulders. They landed with less than a minute of landing fuel left.",
+      "A switch needed for take-off broke inside the cabin. Buzz Aldrin fixed it by pushing it in with a felt-tip pen!",
+      "A plaque on one of Eagle’s legs, still on the Moon, says: “We came in peace for all mankind.”",
+      "The astronauts left a set of mirrors on the Moon. Scientists still bounce lasers off them today to measure how far away the Moon is."
+    ],
+    "sources": [
+      "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1969-059C"
+    ]
+    },
+  "quiz": {
+    "points": 10,
+    "questions": [
+      {
+        "question": "How did Eagle get into space?",
+        "options": [
+          "It flew up from the ground with its own engine",
+          "It rode inside the giant Saturn V rocket",
+          "A space shuttle carried it",
+          "It was built on a space station"
+        ],
+        "answer": "B",
+        "explanation": "Eagle was tucked inside the Saturn V rocket, just below the astronauts’ capsule. (The space shuttle didn’t exist until 1981!)"
+      },
+      {
+        "question": "What did Armstrong and Aldrin bring back from the Moon?",
+        "options": [
+          "Bottles of Moon water",
+          "21.5 kg of Moon rocks and soil",
+          "A Moon rover",
+          "Moon plants"
+        ],
+        "answer": "B",
+        "explanation": "They collected 21.5 kg of rocks and soil. The rocks showed that lava once flooded parts of the Moon."
+      },
+      {
+        "question": "What powered Eagle’s computer, radios and lights?",
+        "options": [
+          "Solar panels",
+          "A wind turbine",
+          "Six batteries",
+          "A nuclear reactor"
+        ],
+        "answer": "C",
+        "explanation": "Six batteries gave Eagle its electricity. Its engines burned two liquids that caught fire as soon as they touched."
+      },
+      {
+        "question": "When did Apollo 11 blast off?",
+        "options": [
+          "16 July 1969, at 9:32 in the morning",
+          "20 July 1969, at 4:17 in the afternoon",
+          "1 January 1970, at midnight",
+          "16 July 1959, at 9:32 in the morning"
+        ],
+        "answer": "A",
+        "explanation": "Apollo 11 launched on 16 July 1969 at 9:32 a.m. Florida time. 20 July was the day Eagle landed on the Moon."
+      },
+      {
+        "question": "Why is part of Eagle still on the Moon, and for how long has it been there?",
+        "options": [
+          "It broke down, and has been there 10 years",
+          "Its bottom half was used as a launch pad and left behind, 57 years ago",
+          "The astronauts forgot it, 30 years ago",
+          "It is a Moon museum built in 2000"
+        ],
+        "answer": "B",
+        "explanation": "The top half blasted off using the bottom half as a launch pad. The bottom half has stayed at Tranquility Base since 1969, 57 years!"
+      }
+    ]
+  }
+}

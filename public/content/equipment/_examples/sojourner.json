@@ -1,0 +1,46 @@
+{
+  "_help": "speaker: narrator (bottom panel) | scientist (Nova pops in; optional expression + body, see nova.json) | equipment (speech bubble). Add, delete or reorder lines freely. quiz.answer is the letter of the right option (A = first). image: no extension needed (jpg/png/webp all work); {x} = the x1/x2/x3 resolution folder. Optional \"voice\": a folder of mp3 blips just for this equipment, e.g. \"assets/mp3/vocal/sojourner/\".",
+  "name": "Sojourner",
+  "image": "assets/image/equipment/{x}/sojourner",
+  "greeting": "I am… Sojourner, the very first rover on Mars!",
+  "script": [
+    {
+      "speaker": "narrator",
+      "text": "Sojourner landed on Mars on 4 July 1997 as part of NASA's Mars Pathfinder mission."
+    },
+    {
+      "speaker": "scientist",
+      "expression": "curious",
+      "body": "arm-down",
+      "text": "How big were you?"
+    },
+    {
+      "speaker": "equipment",
+      "text": "About the size of a microwave oven. Small, but brave!"
+    },
+    {
+      "speaker": "narrator",
+      "text": "It studied the rocks and soil around its landing site and proved that a wheeled robot could explore another planet."
+    }
+  ],
+  "moreInfo": {
+    "image": "",
+    "text": "Sojourner paved the way for every Mars rover that followed, including Spirit, Opportunity, Curiosity and Perseverance."
+  },
+  "quiz": {
+    "points": 10,
+    "questions": [
+      {
+        "question": "What made Sojourner special?",
+        "options": [
+          "It was the first rover to drive on Mars",
+          "It brought rocks back to Earth",
+          "It carried astronauts",
+          "It was the biggest Mars rover"
+        ],
+        "answer": "A",
+        "explanation": "Sojourner was the first wheeled rover to explore Mars, in 1997."
+      }
+    ]
+  }
+}

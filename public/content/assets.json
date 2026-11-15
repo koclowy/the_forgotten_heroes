@@ -1,0 +1,72 @@
+{
+  "_help": [
+    "Where every image and sound comes from. Paths start at the public/ folder.",
+    "A path WITHOUT an extension (assets/image/moon) picks up moon.jpg, .jpeg, .png, .webp, .gif or .svg — whichever you dropped in. Sounds: .mp3, .ogg, .wav or .m4a.",
+    "A path ending in / is a FOLDER: every file in it is used (voice blips are picked at random). For stars and researchPoints, the first image in the folder is used.",
+    "realEquipment = folder of real photos for the \"i\" cards: <id>, or <id>-1, <id>-2, ... for a gallery.",
+    "{x} = the resolution folder: x1 (base size), x2 (2x the pixels) or x3 (3x the pixels). Use the SAME file name in all three. x1 alone is enough; the site picks the sharpest file it needs.",
+    "A missing planet or background image falls back to the built-in drawing. A missing sound is simply silent.",
+    "JPEG has no transparency: use PNG or WebP for the rocket, Nova, stars, cursor and research-points icon. JPEG is fine for the background, planets (cropped to a circle) and equipment (shown inside a frame).",
+    "cursor: size = on-screen size in CSS px (max 42 so x3 stays under the browser's 128 px limit). hotspot = the exact click point [x, y] in x1 pixels. Both are written by `npm run cursors` from cursor/originals/; change size and re-run it."
+  ],
+  "images": {
+    "background": "assets/image/background/{x}/background",
+    "rocket": "assets/image/rocket/{x}/rocket",
+    "rocketBoost": "assets/image/rocket/{x}/rocketboost",
+    "stars": "assets/image/stars/{x}/",
+    "planets": {
+      "earth": "assets/image/planets/{x}/earth",
+      "moon": "assets/image/planets/{x}/moon",
+      "mars": "assets/image/planets/{x}/mars"
+    },
+    "nova": {
+      "body": "assets/image/nova/{x}/body/",
+      "eyes": "assets/image/nova/{x}/eyes/",
+      "brows": "assets/image/nova/{x}/brows/",
+      "mouth": "assets/image/nova/{x}/mouth/"
+    },
+    "researchPoints": "assets/image/research_points/{x}/",
+    "realEquipment": "assets/image/real_equipment/{x}/",
+    "cursor": {
+      "size": 42,
+      "idle": { "image": "assets/image/cursor/{x}/idle", "hotspot": [4, 2] },
+      "tap": { "image": "assets/image/cursor/{x}/tap", "hotspot": [5, 7] }
+    }
+  },
+  "sounds": {
+    "_help": "music: one looping track per screen (normal = title, intro, planets, bonus, Pioneer 10's story, ending, credits; moon / mars = that planet's surface + its equipment; quiz = every quiz). Write a track as a path, or as { \"file\": path, \"volume\": 0.8 } to make just that track quieter/louder (multiplies volume.music). voices.equipment = the default voice for equipment without their own \"voice\" in content/equipment/<id>.json. voiceEveryNLetters only applies to short blips (Nova); long voice clips play one slice per word.",
+    "volume": { "music": 0.3, "effects": 0.8, "voices": 0.55 },
+    "voiceEveryNLetters": 2,
+    "music": {
+      "normal": { "file": "assets/mp3/music/normal_bg", "volume": 0.35 },
+      "moon": { "file": "assets/mp3/music/moon_bg", "volume": 1.4 },
+      "mars": { "file": "assets/mp3/music/mars_bg", "volume": 0.55 },
+      "quiz": { "file": "assets/mp3/music/quiz_bg", "volume": 1 }
+    },
+    "buttons": {
+      "click": "assets/mp3/buttons/button_click",
+      "hover": "assets/mp3/buttons/hover",
+      "back": "assets/mp3/buttons/button_click"
+    },
+    "transitions": {
+      "titleToIntro": "assets/mp3/transitions/fade",
+      "introToPlanets": "assets/mp3/transitions/transition_between_planets_equipment",
+      "zoomIn": "assets/mp3/transitions/transition_between_planets_equipment",
+      "zoomOut": "assets/mp3/transitions/transition_between_planets_equipment",
+      "toEnding": "assets/mp3/transitions/fade",
+      "toCredits": "assets/mp3/transitions/fade"
+    },
+    "game": {
+      "titleTyping": "assets/mp3/game/typewriter",
+      "correct": "assets/mp3/game/successfully_completed_quiz",
+      "wrong": "assets/mp3/game/failed_quiz",
+      "points": "assets/mp3/game/points_collection",
+      "bonusAppears": "assets/mp3/game/bonus"
+    },
+    "voices": {
+      "scientist": "assets/mp3/vocal/scientist/",
+      "equipment": "assets/mp3/vocal/equipment/equipment_normal",
+      "narrator": "assets/mp3/vocal/narrator/"
+    }
+  }
+}

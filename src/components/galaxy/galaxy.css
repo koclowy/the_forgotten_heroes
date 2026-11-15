@@ -1,0 +1,109 @@
+/* Fonts: public/assets/fonts/ (see README → Fonts).
+   Absolute /assets/… paths: Vite rewrites them relative to the built CSS (base "./"), so they work
+   on Netlify and in a GitHub Pages sub-folder. File names are exact (case-sensitive) and URL-encoded.
+   .woff2 first (smaller, made by `npm run fonts`), the original .ttf as fallback. */
+@font-face {
+  font-family: "Neoteric";
+  src:
+    url("/assets/fonts/NEOTERIC%E2%95%95%20-%20Bold%20DEMO%20VERSION.woff2") format("woff2"),
+    url("/assets/fonts/NEOTERIC%E2%95%95%20-%20Bold%20DEMO%20VERSION.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Electrolize";
+  src:
+    url("/assets/fonts/Electrolize-Regular.woff2") format("woff2"),
+    url("/assets/fonts/Electrolize-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Neoteric: only the title on the title screen. Electrolize: everything else. */
+  --font-title: "Neoteric", system-ui, sans-serif;
+  --font-ui: "Electrolize", system-ui, sans-serif;
+}
+
+/* Electrolize has a single Regular weight: never fake a bold (emphasis uses colour / spacing / size
+   instead). Faking italic is allowed (<i> and <chorus>). */
+html,
+body {
+  font-family: var(--font-ui);
+  font-synthesis: style;
+}
+
+/* the typewriter title (Neoteric Bold, as designed). 4.6cqw ≈ 75 % of the stage wide. */
+.title-font {
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 4.6cqw;
+  line-height: 1.1;
+}
+
+/* Custom cursor. The variables are set at runtime from assets.json → images.cursor
+   (src/components/galaxy/cursor.ts); without them the normal system cursors are used.
+   idle = everywhere. tap = over anything clickable, while pressing on it, and while pressing
+   anywhere when a dialog is waiting for "click anywhere to continue". */
+html,
+body {
+  cursor: var(--cursor-idle, auto);
+}
+button:not(:disabled),
+a[href],
+[role="button"],
+[data-clickable],
+[data-clickable] *,
+button:not(:disabled) *,
+[data-advance-waiting]:active,
+[data-advance-waiting]:active * {
+  cursor: var(--cursor-tap, pointer);
+}
+
+/* Dialog text formatting (tags in the JSON "text", see src/content/richText.ts).
+   <chorus> = the other connected equipment speaking: its own line, italic, smaller, muted. */
+.dialog-i {
+  font-style: italic;
+}
+/* Electrolize has no bold: <b> = deep blue + a little letter-spacing (well above 4.5:1 contrast
+   on both the cream bubble and the grey panel) */
+.dialog-b {
+  color: #2335c4;
+  letter-spacing: 0.03em;
+}
+.dialog-small {
+  font-size: 85%;
+}
+.dialog-chorus {
+  display: block;
+  font-style: italic;
+  font-size: 88%;
+  color: color-mix(in srgb, currentColor 75%, transparent);
+}
+
+/* "i" card text area: scrolls inside the card with a thin, quiet scrollbar */
+.info-scroll {
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(26, 29, 51, 0.25) transparent;
+}
+.info-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.info-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.info-scroll::-webkit-scrollbar-thumb {
+  background: rgba(26, 29, 51, 0.22);
+  border-radius: 999px;
+}
+.info-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(26, 29, 51, 0.4);
+}
+
+/* film grain like the prototype background */
+.grain {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}

@@ -1,0 +1,3 @@
+@import "./components/galaxy/galaxy.css";
+@import "tailwindcss";
+html, body, #root { margin: 0; height: 100%; background: #161a33; }

@@ -1,0 +1,147 @@
+{
+  "_help": "speaker: narrator (bottom panel) | scientist (Nova pops in; optional expression + body, see nova.json) | equipment (speech bubble). Add, delete or reorder lines freely. quiz.answer is the letter of the right option (A = first). image: the drawn art in the gold frame (no extension needed; {x} = the x1/x2/x3 folder). moreInfo.image: the real photo(s) in the \"i\" card, default assets/image/real_equipment/{x}/<id> (add <id>-1, <id>-2, … for a gallery); leave it empty to use the default. moreInfo.imageCredit: small credit under the photo. moreInfo.text: the summary paragraph. moreInfo.funFacts (optional): a list of short facts, one bullet each, e.g. [\"Fact one.\", \"Fact two.\"]. moreInfo.sources (optional): a list of web addresses (shown as the site name, e.g. NASA Science) or { \"label\": \"NASA Science: Viking 1\", \"url\": \"https://…\" }; links open in a new tab. Optional \"voice\": this equipment's voice file, e.g. assets/mp3/vocal/equipment/equipment_low_pitch (none = sounds.voices.equipment in assets.json). See README §4. Text formatting in any \"text\" or \"greeting\": <i>italic</i>, <b>bold</b>, <small>smaller</small>, <chorus>the other connected equipment speaking (own line, italic, smaller, faded, quieter voice)</chorus>, e.g. \"Hah, tell us about it. <chorus>Hmph… Can't believe them… We're still here! Still standing!</chorus>\". Optional \"chorusVoice\" on a line: another voice file for its <chorus> part. See README §2. Copy full examples from equipment/_examples/.",
+  "name": "ALSEP Scientific Packages",
+  "image": "assets/image/equipment/{x}/alsep.png",
+  "voice": "assets/mp3/vocal/equipment/equipment_medium_pitch",
+  "greeting": "Solar wind is steady... No moonquakes here…RTG, you okay?... Yes, I’m fine…",
+  "script": [
+    {
+      "speaker": "equipment",
+      "text": "<chorus>Solar wind is steady… No moonquakes here…RTG, you okay?... Yes, I’m fine…</chorus>"
+    },
+    {
+      "speaker": "scientist",
+      "expression": "worried",
+      "body": "wave",
+      "text": "Uhh, hello? Am I interrupting something?"
+    },
+    {
+      "speaker": "equipment",
+      "text": "<chorus>Oh, ah,</chorus> ahem! Sorry. Hello there. I am an Apollo Lunar Surface Experiments Package, or rather, the Central Station of this one."
+    },
+    {
+      "speaker": "narrator",
+      "text": "In November 1969, the Apollo 12 astronauts carried the first full ALSEP to the Moon, packed inside their lunar module, to set up a science station that would keep studying the Moon after they went home."
+    },
+    {
+      "speaker": "equipment",
+      "text": "Me and my colleagues here were deployed at every Apollo mission to get data on the Moon’s environment simply and quickly. <chorus>That’s right. Yes, yes, exactly.</chorus>"
+    },
+    {
+      "speaker": "narrator",
+      "text": "It was a central box with an antenna, wired to six science instruments, and powered by a small nuclear generator that turned heat from plutonium fuel into about 70 watts of electricity."
+    },
+    {
+      "speaker": "equipment",
+      "text": "Is there anything you need?"
+    },
+    {
+      "speaker": "scientist",
+      "expression": "curious",
+      "body": "arm-down",
+      "text": "Well, I don’t want to bother your conversations, but may I ask why you were left here?"
+    },
+    {
+      "speaker": "equipment",
+      "text": "Most of us still worked perfectly before they decided to end our mission! Something about costs… whatever."
+    },
+    {
+      "speaker": "narrator",
+      "text": "Its job was to measure moonquakes, the Sun’s wind, magnetism and dust and send the results to Earth for years, so it was left behind on purpose until NASA switched off every station in 1977 to save money."
+    },
+    {
+      "speaker": "scientist",
+      "expression": "worried",
+      "body": "arm-down",
+      "text": "Oof, yikes..."
+    },
+    {
+      "speaker": "equipment",
+      "text": "Hah, tell us about it. <chorus>Hmph… Can’t believe them… We’re still here! Still standing!</chorus>"
+    },
+    {
+      "speaker": "narrator",
+      "text": "Its instruments recorded thousands of moonquakes and meteorite impacts and measured the Sun’s wind and the Moon’s magnetism, showing that the Moon still trembles today."
+    },
+    {
+      "speaker": "narrator",
+      "text": "Apollo 12 launched from Florida, USA, on 14 November 1969 at 11:22 a.m., landed in the Moon’s Ocean of Storms on 19 November, and its ALSEP sent data for almost 8 years and has now been on the Moon for 57 years."
+    }
+  ],
+  "moreInfo": {
+    "image": "",
+    "imageCredit": "Photo: Honeysuckle creek",
+    "text": "The Apollo Lunar Surface Experiments Package (ALSEP) was a set of science instruments that astronauts set up on the Moon and left behind to keep working. The first full ALSEP was set up by Apollo 12 in November 1969, and later missions added more stations. A central box collected readings about moonquakes, the Sun’s wind, magnetism, dust and the Moon’s very thin air, and radioed them to Earth. The stations kept working for years, until NASA switched them all off on 30 September 1977 to save money. They are still standing on the Moon today.",
+    "funFacts": [
+      "Apollo 12’s rocket was struck by lightning twice just after launch, but the astronauts fixed the problem and flew on to the Moon!",
+      "The ALSEP’s power came from a small nuclear generator making about 70 watts, around as much as one light bulb uses.",
+      "After the astronauts left, NASA crashed Apollo 12’s empty lunar module into the Moon on purpose, so the ALSEP could feel the first ever human-made moonquake.",
+      "Apollo 12 landed only about 180 metres from Surveyor 3, a robot lander from 1967. The astronauts brought about 10 kg of its parts back to Earth.",
+      "The TV camera was pointed at the Sun by accident and broke, so there’s almost no live video of Apollo 12’s moonwalks.",
+      "All five ALSEP stations were switched off on the same day, 30 September 1977, even though many still worked."
+    ],
+    "sources": [
+      "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1969-099C"
+    ] 
+  },
+  "quiz": {
+    "points": 10,
+    "questions": [
+      {
+        "question": "What kind of data did the ALSEP send back to Earth?",
+        "options": [
+          "Photos of aliens",
+          "Radio music from Earth",
+          "Moon weather like rain and snow",
+          "Moonquakes, the Sun’s wind and the Moon’s magnetism"
+        ],
+        "answer": "D",
+        "explanation": "The ALSEP measured moonquakes, the solar wind, magnetism and dust, and radioed it all to Earth."
+      },
+      {
+        "question": "How did the ALSEP get to the Moon?",
+        "options": [
+          "It launched by itself on a small rocket",
+          "It was built on the Moon from Moon rocks",
+          "It was dropped from a satellite",
+          "It was packed inside the Apollo 12 lunar module"
+        ],
+        "answer": "D",
+        "explanation": "The astronauts carried it to the Moon inside their lunar module, then set it up by hand."
+      },
+      {
+        "question": "What was the ALSEP made of, and what powered it?",
+        "options": [
+          "One big telescope, powered by solar panels",
+          "A central box wired to science instruments, powered by a small nuclear generator",
+          "A robot with legs, powered by batteries",
+          "A tent full of tools, powered by wind"
+        ],
+        "answer": "B",
+        "explanation": "A central box with an antenna was wired to the instruments, and a small nuclear generator turned heat into electricity."
+      },
+      {
+        "question": "When did Apollo 12 launch?",
+        "options": [
+          "19 November 1969, at 1:54 in the morning",
+          "16 July 1969, at 9:32 in the morning",
+          "14 November 1969, at 11:22 in the morning",
+          "14 November 1979, at 11:22 in the morning"
+        ],
+        "answer": "C",
+        "explanation": "Apollo 12 launched on 14 November 1969 at 11:22 a.m. Florida time. 16 July 1969 was Apollo 11, and 19 November was the day it landed."
+      },
+      {
+        "question": "Why was the ALSEP left on the Moon, and how long has it been there?",
+        "options": [
+          "It was meant to stay and keep sending data, and it’s been 57 years",
+          "It broke and the astronauts abandoned it, and it’s been 10 years",
+          "It was too heavy for the rocket, and it’s been 30 years",
+          "Robots are still fixing it, and it’s been 40 years"
+        ],
+        "answer": "A",
+        "explanation": "It was designed to stay behind and send data to Earth. It worked until 1977 and has been on the Moon since 1969, 57 years!"
+      }
+    ]
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "_help": "Nova's dialogs. Each line: text (required), expression (see nova.json: neutral, happy, excited, sad, confused, surprised, angry, curious, worried, smug, content, laughing), body (arm-down | wave | point), showPoints (true = reveal + highlight the points counter), button (label of a button shown on that line). Placeholders: {name} {goal} {points}.",
+  "intro": [
+    {
+      "expression": "excited",
+      "body": "wave",
+      "text": "Hi there! I’m {name}, an intern scientist from NASA."
+    },
+    {
+      "expression": "happy",
+      "body": "arm-down",
+      "text": "I’m so lucky to have gotten this job! I just LOVE learning about humanity’s space endeavors, especially all the technology that helped make it happen!"
+    },
+    {
+      "expression": "sad",
+      "body": "arm-down",
+      "text": "It’s a real shame though… a lot of the tech we used was left behind and almost forgotten."
+    },
+    {
+      "expression": "neutral",
+      "body": "point",
+      "text": "Actually, will you join me to explore space and learn more about this forgotten equipment?"
+    },
+    {
+      "expression": "excited",
+      "body": "arm-down",
+      "text": "Really?! Oh, thank you!"
+    },
+    {
+      "expression": "happy",
+      "body": "wave",
+      "text": "To complete our exploration, I’ve set us a goal of research points."
+    },
+    {
+      "expression": "happy",
+      "body": "point",
+      "showPoints": true,
+      "text": "After we learn about each piece of equipment, you’ll gain some research points. Reach {goal}, and we’ll finish."
+    },
+    {
+      "expression": "happy",
+      "body": "wave",
+      "text": "With that in mind, let's start exploring!",
+      "button": "I'm ready!"
+    }
+  ],
+  "bonusUnlocked": [
+    {
+      "expression": "excited",
+      "body": "wave",
+      "text": "We made it! The Moon and Mars, all visited!"
+    },
+    {
+      "expression": "surprised",
+      "body": "point",
+      "text": "Huh? I’m getting another signal from something way in the distance…"
+    },
+    {
+      "expression": "surprised",
+      "body": "point",
+      "text": "Isn’t that…? Let’s check it out before we head home."
+    }
+  ],
+  "ending": [
+    {
+      "expression": "neutral",
+      "body": "wave",
+      "text": "I… think that’s all! For real this time!"
+    },
+    {
+      "expression": "happy",
+      "body": "arm-down",
+      "text": "I can’t thank you enough for joining me on this journey. I’ve learned so much alongside you, and I hope you’ve learned as well."
+    },
+    {
+      "expression": "excited",
+      "body": "wave",
+      "text": "Again, thank you so so much! Until we meet again!",
+      "button": "Finish"
+    }
+  ],
+  "credits": {
+    "heading": "Thank you for exploring!",
+    "subheading": "Prepared by",
+    "names": [
+      "Team CC",
+      "Chloe Tee",
+      "Cadence Lau"
+    ],
+    "note": "NASA Space Apps Challenge · Abandoned but not Forgotten",
+    "restart": "Play again"
+  }
+}

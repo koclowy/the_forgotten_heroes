@@ -1,0 +1,54 @@
+{
+  "_help": "speaker: narrator (bottom panel) | scientist (Nova pops in; optional expression + body, see nova.json) | equipment (speech bubble). Add, delete or reorder lines freely. quiz.answer is the letter of the right option (A = first). image: no extension needed (jpg/png/webp all work); {x} = the x1/x2/x3 resolution folder. Optional \"voice\": a folder of mp3 blips just for this equipment, e.g. \"assets/mp3/vocal/eagle-descent-stage/\".",
+  "name": "Eagle Descent Stage",
+  "image": "assets/image/equipment/{x}/eagle-descent-stage",
+  "greeting": "I am… the bottom half of the Eagle. I was the launch pad home!",
+  "script": [
+    {
+      "speaker": "narrator",
+      "text": "The Eagle was the lunar module that landed Neil Armstrong and Buzz Aldrin on the Moon in July 1969."
+    },
+    {
+      "speaker": "narrator",
+      "text": "It had two parts: a lower descent stage with the landing engine and legs, and an upper ascent stage where the crew rode."
+    },
+    {
+      "speaker": "equipment",
+      "text": "When it was time to go home, the top half blasted off… using me as its launch pad!"
+    },
+    {
+      "speaker": "scientist",
+      "expression": "sad",
+      "body": "arm-down",
+      "text": "So you stayed behind on purpose?"
+    },
+    {
+      "speaker": "equipment",
+      "text": "Someone had to stay at Tranquility Base!"
+    },
+    {
+      "speaker": "narrator",
+      "text": "A plaque on one of its legs says the astronauts came in peace for all mankind."
+    }
+  ],
+  "moreInfo": {
+    "image": "",
+    "text": "Leaving the heavy descent stage behind meant the ascent stage had much less weight to lift back into lunar orbit, where it met up with the command module for the trip home."
+  },
+  "quiz": {
+    "points": 10,
+    "questions": [
+      {
+        "question": "What job did the descent stage do when the astronauts left the Moon?",
+        "options": [
+          "It flew them back to Earth",
+          "It was the launch pad for the ascent stage",
+          "It became a Moon base",
+          "It drove to a new landing site"
+        ],
+        "answer": "B",
+        "explanation": "The ascent stage lifted off from the top of the descent stage, which stayed on the surface."
+      }
+    ]
+  }
+}

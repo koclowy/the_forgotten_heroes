@@ -1,0 +1,54 @@
+{
+  "_help": "speaker: narrator (bottom panel) | scientist (Nova pops in; optional expression + body, see nova.json) | equipment (speech bubble). Add, delete or reorder lines freely. quiz.answer is the letter of the right option (A = first). image: no extension needed (jpg/png/webp all work); {x} = the x1/x2/x3 resolution folder. Optional \"voice\": a folder of mp3 blips just for this equipment, e.g. \"assets/mp3/vocal/snoopy/\".",
+  "name": "Snoopy · Apollo 10 Lunar Module",
+  "image": "assets/image/equipment/{x}/snoopy",
+  "greeting": "Psst… out here! I'm Snoopy, and I've been circling the Sun since 1969.",
+  "script": [
+    {
+      "speaker": "narrator",
+      "text": "In May 1969, Apollo 10 was the final dress rehearsal before the first Moon landing."
+    },
+    {
+      "speaker": "narrator",
+      "text": "Its lunar module, nicknamed Snoopy, flew down close to the Moon's surface but never landed."
+    },
+    {
+      "speaker": "equipment",
+      "text": "After the test, my top half was sent off into orbit around the Sun."
+    },
+    {
+      "speaker": "scientist",
+      "expression": "surprised",
+      "body": "arm-down",
+      "text": "So you're not on any planet at all?"
+    },
+    {
+      "speaker": "equipment",
+      "text": "Nope! I'm the only Apollo lunar module ascent stage still drifting through space."
+    },
+    {
+      "speaker": "narrator",
+      "text": "In 2019, astronomers announced a possible match for Snoopy, spotted again 50 years after it was cast off."
+    }
+  ],
+  "moreInfo": {
+    "image": "",
+    "text": "Apollo 10's command module was nicknamed Charlie Brown, after the Peanuts comic strip. Snoopy tested the landing approach so that Apollo 11 could go all the way down two months later."
+  },
+  "quiz": {
+    "points": 0,
+    "questions": [
+      {
+        "question": "Where is Snoopy today?",
+        "options": [
+          "On the Moon",
+          "On Mars",
+          "Orbiting the Sun",
+          "In a museum"
+        ],
+        "answer": "C",
+        "explanation": "Snoopy's ascent stage was sent into orbit around the Sun in 1969."
+      }
+    ]
+  }
+}

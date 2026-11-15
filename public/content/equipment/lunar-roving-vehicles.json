@@ -1,0 +1,147 @@
+{
+  "_help": "speaker: narrator (bottom panel) | scientist (Nova pops in; optional expression + body, see nova.json) | equipment (speech bubble). Add, delete or reorder lines freely. quiz.answer is the letter of the right option (A = first). image: the drawn art in the gold frame (no extension needed; {x} = the x1/x2/x3 folder). moreInfo.image: the real photo(s) in the \"i\" card, default assets/image/real_equipment/{x}/<id> (add <id>-1, <id>-2, … for a gallery); leave it empty to use the default. moreInfo.imageCredit: small credit under the photo. moreInfo.text: the summary paragraph. moreInfo.funFacts (optional): a list of short facts, one bullet each, e.g. [\"Fact one.\", \"Fact two.\"]. moreInfo.sources (optional): a list of web addresses (shown as the site name, e.g. NASA Science) or { \"label\": \"NASA Science: Viking 1\", \"url\": \"https://…\" }; links open in a new tab. Optional \"voice\": this equipment's voice file, e.g. assets/mp3/vocal/equipment/equipment_low_pitch (none = sounds.voices.equipment in assets.json). See README §4. Text formatting in any \"text\" or \"greeting\": <i>italic</i>, <b>bold</b>, <small>smaller</small>, <chorus>the other connected equipment speaking (own line, italic, smaller, faded, quieter voice)</chorus>, e.g. \"Hah, tell us about it. <chorus>Hmph… Can't believe them… We're still here! Still standing!</chorus>\". Optional \"chorusVoice\" on a line: another voice file for its <chorus> part. See README §2. Copy full examples from equipment/_examples/.",
+  "name": "Lunar Roving Vehicles (LRVs)",
+  "image": "assets/image/equipment/{x}/lunar-roving-vehicles.png",
+  "voice": "assets/mp3/vocal/equipment/equipment_high_pitch",
+  "greeting": "Oh, hello, hello!!! Hi!!",
+  "script": [
+    {
+      "speaker": "equipment",
+      "text": "Oh, hello, hello!!! Hi!!"
+    },
+    {
+      "speaker": "equipment",
+      "text": "Are you here for a ride??"
+    },
+    {
+      "speaker": "scientist",
+      "expression": "confused",
+      "body": "arm-down",
+      "text": "A ride? Sorry, no, I’m just here to research!"
+    },
+    {
+      "speaker": "equipment",
+      "text": "Research? Ohh, I can tell you lots about that!"
+    },
+    {
+      "speaker": "equipment",
+      "text": "I’m a Lunar Roving Vehicle! One of 3 up here!"
+    },
+    {
+      "speaker": "narrator",
+      "text": "In 1971, NASA sent the first Lunar Roving Vehicle to the Moon, folded up on the side of the Apollo 15 lunar module, so astronauts could explore much farther than they could walk."
+    },
+    {
+      "speaker": "narrator",
+      "text": "It was built from light metal tubes with wheels made of woven wire, and two batteries powered a small electric motor in each of its four wheels."
+    },
+    {
+      "speaker": "equipment",
+      "text": "Me and my buddies have crossed around 56 miles of the Moon altogether! We can reach a top speed of 11.2 miles per hour, and can be folded up for transport!"
+    },
+    {
+      "speaker": "scientist",
+      "expression": "curious",
+      "body": "arm-down",
+      "text": "Oh wow… What did they use you and your friends for?"
+    },
+    {
+      "speaker": "equipment",
+      "text": "Transport, of course! We were made to carry the astronauts and their equipment all over! Ahh, I miss the feeling of moon dust under my wheels…"
+    },
+        {
+      "speaker": "narrator",
+      "text": "Its job was to carry astronauts, tools and Moon rocks across the Moon, and because it was too heavy to bring home, each rover was parked and left behind when its mission ended."
+    },
+    {
+      "speaker": "narrator",
+      "text": "With their rover’s help, the Apollo 15 astronauts brought home 77 kg of Moon rocks, including the famous “Genesis Rock”, a piece of the Moon’s ancient crust."
+    },
+    {
+      "speaker": "narrator",
+      "text": "The first rover launched from Florida, USA, on 26 July 1971 at 9:34 a.m., drove about 28 km on the Moon, and has been parked there with its two buddies for 55 years."
+    },
+    {
+      "speaker": "scientist",
+      "expression": "excited",
+      "body": "wave",
+      "text": "That’s so cool… I hope I can catch a ride with you one day!"
+    }
+  ],
+  "moreInfo": {
+    "image": "",
+    "imageCredit": "Photo: NASA",
+    "text": "The Lunar Roving Vehicle was a battery-powered car built for the Moon. Three of them were driven on the Apollo 15, 16 and 17 missions in 1971 and 1972. Each rover rode to the Moon folded up on the side of the lunar module, then unfolded so two astronauts could drive it. They let the astronauts explore much farther, carry more tools and collect more Moon rocks. At the end of each mission the rover was left behind, and all three are still parked on the Moon today.",
+    "funFacts": [
+      "The rovers had no rubber tyres. Their wheels were made of woven wire, so they could never get a flat!",
+      "On Earth a rover weighed about 210 kg, but in the Moon’s weaker gravity it felt like only about 35 kg.",
+      "Together, the three rovers drove about 90 km (56 miles) across the Moon.",
+      "The rover speed record on the Moon is about 18 km/h (11.2 mph), set on Apollo 17.",
+      "When a rover’s fender broke on Apollo 17, the astronauts fixed it with maps, clamps and tape so they wouldn’t get sprayed with Moon dust.",
+      "Astronauts parked the rovers so their TV cameras could film the lunar module blasting off from the Moon."
+    ],
+    "sources": [
+      "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1971-063C"
+    ]
+  },
+  "quiz": {
+    "points": 10,
+    "questions": [
+      {
+        "question": "How did the Lunar Roving Vehicle get to the Moon?",
+        "options": [
+          "It drove there from Earth",
+          "It was folded up on the side of the lunar module",
+          "It flew there on its own small rocket",
+          "It was dropped by parachute"
+        ],
+        "answer": "B",
+        "explanation": "The rover was folded up and stored on the side of the lunar module, then unfolded by the astronauts on the Moon."
+      },
+      {
+        "question": "What was the rover made of, and what powered it?",
+        "options": [
+          "Heavy steel and a petrol engine",
+          "Light metal tubes, with batteries and electric motors",
+          "Wood and solar panels",
+          "Plastic and a jet engine"
+        ],
+        "answer": "B",
+        "explanation": "It was built from light metal tubes, and two batteries powered an electric motor in each wheel."
+      },
+      {
+        "question": "When did the first Lunar Roving Vehicle launch?",
+        "options": [
+          "26 July 1971, at 9:34 in the morning",
+          "16 July 1969, at 9:32 in the morning",
+          "30 July 1971, at 6:16 in the evening",
+          "26 July 1981, at 9:34 in the morning"
+        ],
+        "answer": "A",
+        "explanation": "It launched with Apollo 15 on 26 July 1971 at 9:34 a.m. Florida time. 16 July 1969 was Apollo 11, and 30 July 1971 was the day it landed."
+      },
+      {
+        "question": "Why were the rovers left on the Moon, and how long has the first one been there?",
+        "options": [
+          "They broke down, and it’s been 10 years",
+          "Robots still drive them, and it’s been 20 years",
+          "They were too heavy to bring home, and it’s been 55 years",
+          "The astronauts lost the keys, and it’s been 40 years"
+        ],
+        "answer": "C",
+        "explanation": "The rovers were too heavy to carry back, so they were parked and left behind. The first one has been there since 1971, 55 years!"
+      },
+      {
+        "question": "What famous rock did the Apollo 15 astronauts find with the help of their rover?",
+        "options": [
+          "A fossil of a Moon animal",
+          "A meteorite from Mars",
+          "A diamond as big as a football",
+          "The Genesis Rock, a piece of the Moon’s ancient crust"
+        ],
+        "answer": "D",
+        "explanation": "The Genesis Rock is a very old piece of the Moon’s first crust, found on Apollo 15."
+      }
+    ]
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "_help": "speaker: narrator (bottom panel) | scientist (Nova pops in; optional expression + body, see nova.json) | equipment (speech bubble). Add, delete or reorder lines freely. quiz.answer is the letter of the right option (A = first). image: no extension needed (jpg/png/webp all work); {x} = the x1/x2/x3 resolution folder. Optional \"voice\": a folder of mp3 blips just for this equipment, e.g. \"assets/mp3/vocal/lunar-rover/\".",
+  "name": "Lunar Roving Vehicle",
+  "image": "assets/image/equipment/{x}/lunar-rover",
+  "greeting": "I am… the Lunar Roving Vehicle. I drove astronauts across the Moon!",
+  "script": [
+    {
+      "speaker": "narrator",
+      "text": "Three Lunar Roving Vehicles were driven on the Moon during Apollo 15, 16 and 17 (1971–72)."
+    },
+    {
+      "speaker": "scientist",
+      "expression": "surprised",
+      "body": "arm-down",
+      "text": "Wait, astronauts drove a car on the Moon?!"
+    },
+    {
+      "speaker": "equipment",
+      "text": "Yep! A battery-powered one. I folded up to ride along on the lunar module."
+    },
+    {
+      "speaker": "narrator",
+      "text": "With the rover, astronauts could travel much farther from their landing site than on foot, so they reached more interesting rocks and brought back more samples."
+    },
+    {
+      "speaker": "narrator",
+      "text": "When each mission ended, its rover was parked and left behind. All three are still on the Moon today."
+    }
+  ],
+  "moreInfo": {
+    "image": "",
+    "text": "The rover was designed to be lightweight and to fold up so it fit in a small bay on the side of the lunar module. Astronauts unfolded it on the surface, then drove it on several excursions during each mission."
+  },
+  "quiz": {
+    "points": 10,
+    "questions": [
+      {
+        "question": "How many Lunar Roving Vehicles were left on the Moon?",
+        "options": [
+          "One",
+          "Two",
+          "Three",
+          "Five"
+        ],
+        "answer": "C",
+        "explanation": "One each from Apollo 15, 16 and 17."
+      },
+      {
+        "question": "What powered the Lunar Roving Vehicle?",
+        "options": [
+          "Petrol",
+          "Batteries",
+          "Wind",
+          "Steam"
+        ],
+        "answer": "B",
+        "explanation": "It ran on batteries. There's no air on the Moon, so a fuel engine wouldn't work."
+      }
+    ]
+  }
+}

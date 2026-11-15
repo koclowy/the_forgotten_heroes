@@ -1,0 +1,65 @@
+{
+  "_help": "speaker: narrator (bottom panel) | scientist (Nova pops in; optional expression + body, see nova.json) | equipment (speech bubble). Add, delete or reorder lines freely. quiz.answer is the letter of the right option (A = first). image: no extension needed (jpg/png/webp all work); {x} = the x1/x2/x3 resolution folder. Optional \"voice\": a folder of mp3 blips just for this equipment, e.g. \"assets/mp3/vocal/opportunity/\".",
+  "name": "Opportunity",
+  "image": "assets/image/equipment/{x}/opportunity",
+  "greeting": "I am… Opportunity. I was built for 90 days and lasted almost 15 years.",
+  "script": [
+    {
+      "speaker": "narrator",
+      "text": "Opportunity landed on Mars in January 2004. Its mission was planned to last about 90 Martian days."
+    },
+    {
+      "speaker": "equipment",
+      "text": "Ninety days? I kept going for almost 15 years!"
+    },
+    {
+      "speaker": "narrator",
+      "text": "It drove more than 45 km and found strong evidence that liquid water once existed on Mars."
+    },
+    {
+      "speaker": "scientist",
+      "expression": "sad",
+      "body": "arm-down",
+      "text": "What finally stopped you?"
+    },
+    {
+      "speaker": "equipment",
+      "text": "A planet-wide dust storm in 2018 blocked the sunlight my solar panels needed."
+    },
+    {
+      "speaker": "narrator",
+      "text": "NASA declared the mission complete in February 2019."
+    }
+  ],
+  "moreInfo": {
+    "image": "",
+    "text": "Opportunity had a twin, Spirit, which landed on the other side of Mars in 2004. Together they changed what scientists knew about Mars's watery past."
+  },
+  "quiz": {
+    "points": 10,
+    "questions": [
+      {
+        "question": "What ended Opportunity's mission?",
+        "options": [
+          "A crash landing",
+          "Running out of fuel",
+          "A dust storm blocking the sunlight",
+          "A software update"
+        ],
+        "answer": "C",
+        "explanation": "A huge dust storm in 2018 cut off the sunlight its solar panels relied on."
+      },
+      {
+        "question": "Opportunity was planned to last about 90 Martian days. How long did it keep working?",
+        "options": [
+          "About 90 days",
+          "About 1 year",
+          "About 5 years",
+          "Almost 15 years"
+        ],
+        "answer": "D",
+        "explanation": "It landed in 2004 and kept going until 2018."
+      }
+    ]
+  }
+}

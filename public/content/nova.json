@@ -1,0 +1,30 @@
+{
+  "_help": [
+    "Nova's expressions. Each expression picks ONE file from each layer folder, by file name without the extension (case, spaces and dashes don't matter: \"Squint Forward\" = \"squint-forward\").",
+    "Layer folders: assets/image/nova/x1/body, eyes, brows, mouth (+ the same in x2/ and x3/). Drawn bottom to top: body, mouth, eyes, brows.",
+    "Lines in story.json and in equipment scripts (speaker \"scientist\") choose \"expression\" and \"body\". Leave them out to use defaultExpression / defaultBody.",
+    "mouth = her mouth when she's quiet. While her text types, the mouth flips between it and the talk mouths (talkMouths, or talk.mouths if the expression has none).",
+    "blink.eyes = the closed eyes used for blinking. Set \"blink\": false on an expression whose eyes are already closed.",
+    "poses = the old pose names (idle / talk / wave / point) still work in lines; this says which body each one means.",
+    "New expression: copy one, rename it, pick other files. A typo shows a red box listing the valid names."
+  ],
+  "defaultExpression": "neutral",
+  "defaultBody": "arm-down",
+  "poses": { "idle": "arm-down", "talk": "arm-down", "wave": "wave", "point": "point" },
+  "blink": { "eyes": "closedown" },
+  "talk": { "mouths": ["open-smile", "smile-top-teeth"] },
+  "expressions": {
+    "neutral":   { "eyes": "forward",        "brows": "happy",    "mouth": "smile",             "talkMouths": ["open-smile"] },
+    "happy":     { "eyes": "cheery",         "brows": "happy",    "mouth": "smirk",             "talkMouths": ["open-smile", "big-smile"] },
+    "excited":   { "eyes": "starry-eyed",    "brows": "happy",    "mouth": "big-smile",         "talkMouths": ["smile-top-teeth", "open-smile"] },
+    "sad":       { "eyes": "forward",        "brows": "worry",    "mouth": "slight-frown",      "talkMouths": ["open-mouth-frown"] },
+    "confused":  { "eyes": "side",           "brows": "question", "mouth": "smirk",             "talkMouths": ["open-mouth-frown"] },
+    "surprised": { "eyes": "forward",        "brows": "happy",    "mouth": "open-mouth-frown",  "talkMouths": ["wider-mouth-frown", "open-smile"] },
+    "angry":     { "eyes": "squint-forward", "brows": "worry",    "mouth": "wider-mouth-frown", "talkMouths": ["open-mouth-frown"] },
+    "curious":   { "eyes": "side",           "brows": "question", "mouth": "smile",             "talkMouths": ["open-smile"] },
+    "worried":   { "eyes": "side",           "brows": "worry",    "mouth": "slight-frown",      "talkMouths": ["open-mouth-frown", "wider-mouth-frown"] },
+    "smug":      { "eyes": "squint-side",    "brows": "question", "mouth": "smirk",             "talkMouths": ["open-smile"] },
+    "content":   { "eyes": "closeup",        "brows": "happy",    "mouth": "smile",             "talkMouths": ["open-smile"], "blink": false },
+    "laughing":  { "eyes": "closeup",        "brows": "happy",    "mouth": "big-smile",         "talkMouths": ["smile-top-teeth", "open-smile"], "blink": false }
+  }
+}

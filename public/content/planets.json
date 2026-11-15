@@ -1,0 +1,31 @@
+{
+  "_help": "Planet ids must stay earth / moon / mars (they match the layout). A planet with equipment becomes clickable. Equipment ids = file names in content/equipment/ (without .json). Files in content/equipment/_examples/ are ignored (copy them as a starting point). Order = left to right on the planet. color = fallback if there's no planet image.",
+  "planets": {
+    "earth": {
+      "name": "Earth",
+      "color": "#2D4BFF",
+      "equipment": []
+    },
+    "moon": {
+      "name": "The Moon",
+      "color": "#D9D9D9",
+      "equipment": [
+        "apollo-lunar-modules",
+        "lunar-roving-vehicles",
+        "alsep"
+      ]
+    },
+    "mars": {
+      "name": "Mars",
+      "color": "#E65024",
+      "equipment": [
+        "spirit-and-opportunity",
+        "viking-1-lander",
+        "insight-lander"
+      ]
+    }
+  },
+  "bonus": {
+    "equipment": "pioneer-10"
+  }
+}

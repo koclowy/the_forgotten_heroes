@@ -1,0 +1,145 @@
+{
+  "_help": "speaker: narrator (bottom panel) | scientist (Nova pops in; optional expression + body, see nova.json) | equipment (speech bubble). Add, delete or reorder lines freely. quiz.answer is the letter of the right option (A = first). image: the drawn art in the gold frame (no extension needed; {x} = the x1/x2/x3 folder). moreInfo.image: the real photo(s) in the \"i\" card, default assets/image/real_equipment/{x}/<id> (add <id>-1, <id>-2, … for a gallery); leave it empty to use the default. moreInfo.imageCredit: small credit under the photo. moreInfo.text: the summary paragraph. moreInfo.funFacts (optional): a list of short facts, one bullet each, e.g. [\"Fact one.\", \"Fact two.\"]. moreInfo.sources (optional): a list of web addresses (shown as the site name, e.g. NASA Science) or { \"label\": \"NASA Science: Viking 1\", \"url\": \"https://…\" }; links open in a new tab. Optional \"voice\": this equipment's voice file, e.g. assets/mp3/vocal/equipment/equipment_low_pitch (none = sounds.voices.equipment in assets.json). See README §4. Text formatting in any \"text\" or \"greeting\": <i>italic</i>, <b>bold</b>, <small>smaller</small>, <chorus>the other connected equipment speaking (own line, italic, smaller, faded, quieter voice)</chorus>, e.g. \"Hah, tell us about it. <chorus>Hmph… Can't believe them… We're still here! Still standing!</chorus>\". Optional \"chorusVoice\" on a line: another voice file for its <chorus> part. See README §2. Copy full examples from equipment/_examples/.",
+  "name": "Viking 1 Lander",
+  "image": "assets/image/equipment/{x}/viking-1-lander.png",
+  "voice": "assets/mp3/vocal/equipment/equipment_low_pitch",
+  "script": [
+    {
+      "speaker": "scientist",
+      "expression": "happy",
+      "body": "wave",
+      "text": "Well hey there! What’s your name?"
+    },
+    {
+      "speaker": "equipment",
+      "text": "I’m the Viking 1 lander, the first to touch down on this planet. An’ I’ve been here since 1976."
+    },
+    {
+      "speaker": "narrator",
+      "text": "In 1975, NASA launched Viking 1 on a Titan rocket from Florida to become the first spacecraft to land safely on Mars and search for signs of life."
+    },
+    {
+      "speaker": "narrator",
+      "text": "It came in two parts: an orbiter that circled Mars using solar panels, and a three-legged lander with cameras, a robot arm and a mini science lab, powered by two small nuclear generators."
+    },
+    {
+      "speaker": "scientist",
+      "expression": "curious",
+      "body": "arm-down",
+      "text": "Gosh, you’ve been here a while! What’s it like being on this planet for so long?"
+    },
+    {
+      "speaker": "equipment",
+      "text": "Eh, scenery starts gettin’ old after the first 5 years. Doesn’t help that I can't move anywhere."
+    },
+    {
+      "speaker": "scientist",
+      "expression": "surprised",
+      "body": "arm-down",
+      "text": "So you’ve been stuck right here ever since you landed?"
+    },
+    {
+      "speaker": "equipment",
+      "text": "That’s right. Unlike those yappy two rovers, hah. Back in my day, ya didn’t- Oh, I’m getting ahead of m’self."
+    },
+    {
+      "speaker": "narrator",
+      "text": "Its mission was to photograph Mars and test its soil for life, and since it was built to stay in one spot, it kept sending science and weather reports until a wrong command from Earth cut off contact in 1982."
+    },
+    {
+      "speaker": "narrator",
+      "text": "Together with its twin Viking 2, it sent back about 4,500 photos of the surface, years of daily weather reports, and soil tests that found lots of sulfur but no clear signs of life."
+    },
+    {
+      "speaker": "equipment",
+      "text": "I’m happy for those two, to tell ya the truth. Even if I miss my glory days."
+    },
+    {
+      "speaker": "scientist",
+      "expression": "laughing",
+      "body": "arm-down",
+      "text": "You did amazing work while you could!"
+    },
+    {
+      "speaker": "narrator",
+      "text": "Viking 1 launched from Cape Canaveral, Florida, on 20 August 1975 at 5:22 p.m. local time, landed on 20 July 1976 on the “Golden Plain” of Chryse Planitia, and has now been on Mars for 50 years."
+    }
+  ],
+  "moreInfo": {
+    "image": "",
+    "imageCredit": "Photo: NASA",
+    "text": "Viking 1 made the first truly successful landing on Mars on 20 July 1976. It had two parts: an orbiter that circled Mars taking pictures, and a lander that touched down and sent back the first photos from the Martian surface. The lander scooped up soil and tested it for signs of life, measured the weather and studied the ground. The orbiter worked until 1980, and the lander kept sending weather reports until 1982, when a faulty command from Earth cut off contact. Every Mars mission since has built on what Viking began.",
+    "funFacts": [
+      "Viking 1 took the very first photo ever from the surface of Mars, just minutes after it landed.",
+      "It landed on 20 July 1976, exactly seven years after Apollo 11 landed on the Moon on 20 July 1969!",
+      "Photos from the orbiter showed the planned landing spot was too rocky, so scientists picked a new one. Viking 1 landed about 28 km from its first target.",
+      "Mars was freezing: Viking measured about −86°C before dawn and −33°C in the afternoon, colder than any home freezer.",
+      "Its robot arm scooped up Mars soil to test for life. The results were so puzzling that scientists argued about them for years.",
+      "The two Viking orbiters took 52,663 pictures and mapped about 97% of Mars.",
+      "In 1982 the lander was renamed the Thomas Mutch Memorial Station, after the leader of Viking’s camera team."
+    ],
+    "sources": [
+      "https://science.nasa.gov/mission/viking-1/"
+    ]
+  },
+  "quiz": {
+    "points": 10,
+    "questions": [
+       {
+        "question": "How did Viking 1 get to Mars?",
+        "options": [
+          "Inside a Saturn V with astronauts",
+          "On two Delta II rockets",
+          "On a Titan rocket launched from Florida",
+          "Folded up on the side of a lunar module"
+        ],
+        "answer": "C",
+        "explanation": "Viking 1 launched on a Titan IIIE-Centaur rocket from Cape Canaveral, Florida. (Two Delta II rockets carried Spirit and Opportunity.)"
+      },
+      {
+        "question": "What was Viking 1 made of, and what powered its lander?",
+        "options": [
+          "A small battery-powered car",
+          "Six wheels and solar panels",
+          "An orbiter and a three-legged lander, powered by two small nuclear generators",
+          "A giant balloon filled with helium"
+        ],
+        "answer": "C",
+        "explanation": "Viking 1 had a solar-powered orbiter and a three-legged lander. The lander ran on two small nuclear generators that turn heat into electricity."
+      },
+      {
+        "question": "What did Viking 1’s soil tests find?",
+        "options": [
+          "Gold and diamonds",
+          "Lots of sulfur, but no clear signs of life",
+          "Tiny Martian bugs",
+          "Puddles of liquid water"
+        ],
+        "answer": "B",
+        "explanation": "The soil had lots of sulfur, unlike anything on Earth or the Moon, but no clear signs of life."
+      },
+      {
+        "question": "When did Viking 1 blast off?",
+        "options": [
+          "20 August 1975, at 5:22 in the evening",
+          "20 July 1976, at 5:22 in the evening",
+          "20 July 1969, at 9:32 in the morning",
+          "10 June 2003, at 1:58 in the afternoon"
+        ],
+        "answer": "A",
+        "explanation": "Viking 1 launched on 20 August 1975 and took about 11 months to land on Mars, on 20 July 1976."
+      },
+      {
+        "question": "Why is Viking 1 still on Mars, and how long has it been there?",
+        "options": [
+          "It ran out of petrol, and it’s been 10 years",
+          "It was built to stay in one spot, and contact was lost in 1982 after a wrong command, so it’s been 50 years",
+          "Astronauts took it apart, and it’s been 30 years",
+          "It drove away and got lost, and it’s been 20 years"
+        ],
+        "answer": "B",
+        "explanation": "The lander never moved, and a faulty command from Earth cut off contact in 1982. It landed in 1976, 50 years ago!"
+      }
+    ]
+  }
+}

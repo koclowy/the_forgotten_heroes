@@ -1,0 +1,155 @@
+{
+  "_help": "speaker: narrator (bottom panel) | scientist (Nova pops in; optional expression + body, see nova.json) | equipment (speech bubble). Add, delete or reorder lines freely. quiz.answer is the letter of the right option (A = first). image: the drawn art in the gold frame (no extension needed; {x} = the x1/x2/x3 folder). moreInfo.image: the real photo(s) in the \"i\" card, default assets/image/real_equipment/{x}/<id> (add <id>-1, <id>-2, … for a gallery); leave it empty to use the default. moreInfo.imageCredit: small credit under the photo. moreInfo.text: the summary paragraph. moreInfo.funFacts (optional): a list of short facts, one bullet each, e.g. [\"Fact one.\", \"Fact two.\"]. moreInfo.sources (optional): a list of web addresses (shown as the site name, e.g. NASA Science) or { \"label\": \"NASA Science: Viking 1\", \"url\": \"https://…\" }; links open in a new tab. Optional \"voice\": this equipment's voice file, e.g. assets/mp3/vocal/equipment/equipment_low_pitch (none = sounds.voices.equipment in assets.json). See README §4. Text formatting in any \"text\" or \"greeting\": <i>italic</i>, <b>bold</b>, <small>smaller</small>, <chorus>the other connected equipment speaking (own line, italic, smaller, faded, quieter voice)</chorus>, e.g. \"Hah, tell us about it. <chorus>Hmph… Can't believe them… We're still here! Still standing!</chorus>\". Optional \"chorusVoice\" on a line: another voice file for its <chorus> part. See README §2. Copy full examples from equipment/_examples/.",
+  "name": "Spirit & Opportunity",
+  "image": "assets/image/equipment/{x}/spirit-and-opportunity.png",
+  "voice": "assets/mp3/vocal/equipment/equipment_high_pitch",
+  "script": [
+    {
+      "speaker": "scientist",
+      "expression": "angry",
+      "body": "arm-down",
+      "text": "Ough, it’s so dusty around here. My glasses are getting covered up!"
+    },
+    {
+      "speaker": "equipment",
+      "text": "<chorus>Spirit: Hey! Over here!</chorus>"
+    },
+    {
+      "speaker": "equipment",
+      "text": "<b>Opportunity: We know a thing or two about getting dusty...</b>"
+    },
+    {
+      "speaker": "narrator",
+      "text": "In 2003, NASA launched twin rovers to Mars on two Delta II rockets from Florida. Spirit was launched on 10 June at 1:58 p.m. and Opportunity on 7 July at 11:18 p.m.). They were tasked to find out if Mars was once wet enough for life."
+    },
+    {
+      "speaker": "scientist",
+      "expression": "confused",
+      "body": "arm-down",
+      "text": "Wooah! What happened here?!"
+    },
+    {
+      "speaker": "equipment",
+      "text": "<chorus>Spirit: My name is Spirit, and this is ...</chorus>"
+    },
+    {
+      "speaker": "equipment",
+      "text": "<b>Opportunity: ...Opportunity. We’re solar-powered Mars rovers meant to explore this planet and see if life can exist!</b>"
+    },
+    {
+      "speaker": "narrator",
+      "text": "Each rover was about the size of a golf cart, with six wheels, a camera “head” and a robot arm, and its solar panels charged its batteries with sunlight."
+    },
+    {
+      "speaker": "equipment",
+      "text": "<chorus>Spirit: We did a really good job too, we lasted for YEARS after we were meant to stop! But ...</chorus>"
+    },
+    {
+      "speaker": "equipment",
+      "text": "<b>Opportunity: ...Spirit got stuck in the sand, and my solar panels got covered up in a storm.</b>"
+    },
+    {
+      "speaker": "narrator",
+      "text": "Their 90-day mission was to search Mars’s rocks for signs of past water, but they kept going until Spirit got stuck in sand in 2009 and a dust storm blocked Opportunity’s sunlight in 2018, and both still rest where they stopped, 22 years after landing."
+    },
+    {
+      "speaker": "narrator",
+      "text": "Opportunity found tiny round “blueberries” of a mineral called hematite and veins of gypsum, and Spirit found silica, all of which form in water, proving that Mars was once wet."
+    },
+    {
+      "speaker": "scientist",
+      "expression": "happy",
+      "body": "point",
+      "text": "You know, everyone on Earth still remembers your legacy! You’ve touched so many hearts across the world."
+    },
+    {
+      "speaker": "equipment",
+      "text": "<chorus>Spirit: Wow... You mean it?</chorus>"
+    },
+    {
+      "speaker": "equipment",
+      "text": "<b>Opportunity: I guess our mission was even more successful than we thought!</b>"
+    },
+        {
+      "speaker": "narrator",
+      "text": "They proved that Mars once had water, Opportunity’s 45 km drive became the record for the longest trip on another world, and when NASA said goodbye in 2019, the team played it one last wake-up song: “I’ll Be Seeing You.”"
+    }
+  ],
+  "moreInfo": {
+    "image": "",
+    "imageCredit": "Photo: NASA",
+    "text": "Spirit and Opportunity were identical twin robot geologists sent to opposite sides of Mars. They launched in 2003 and landed in January 2004, Spirit in Gusev Crater and Opportunity at Meridiani Planum, two places that looked like water had once been there. They were meant to work for about 90 Martian days, but Spirit kept going until 2010 and Opportunity until 2018. Together they proved that liquid water existed on Mars long ago, and they paved the way for later rovers like Curiosity and Perseverance.",
+    "funFacts": [
+      "Both rovers landed by bouncing across Mars wrapped in giant airbags, like beach balls!",
+      "They were built to last 90 Martian days. Opportunity kept working for almost 15 years, about 60 times longer!",
+      "When one of Spirit’s wheels broke, it kept exploring by driving backwards and dragging the stuck wheel.",
+      "Martian winds sometimes blew the dust off their solar panels, giving them a sudden power boost.",
+      "Opportunity drove 45.16 km. It held the record for the longest drive on another world until October 2026, when Perseverance passed it.",
+      "Together they sent home more than 300,000 raw pictures of Mars.",
+      "Spirit’s landing site was named Columbia Memorial Station, in honour of the astronauts lost on the Space Shuttle Columbia."
+    ],
+    "sources": [
+      "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/"
+    ]
+  },
+  "quiz": {
+    "points": 10,
+    "questions": [
+       {
+        "question": "How did Spirit and Opportunity get to Mars?",
+        "options": [
+          "On two separate Delta II rockets from Florida",
+          "Together inside the Space Shuttle",
+          "Folded up on a lunar module",
+          "On one giant Saturn V rocket"
+        ],
+        "answer": "A",
+        "explanation": "Each twin had its own Delta II rocket, launched from Florida a few weeks apart in 2003."
+      },
+      {
+        "question": "Which discovery showed that Mars was once wet?",
+        "options": [
+          "A river that still flows today",
+          "Living fish in a Martian lake",
+          "Snowmen made of ice",
+          "Minerals like hematite “blueberries” and gypsum, which form in water"
+        ],
+        "answer": "D",
+        "explanation": "Hematite, gypsum and silica usually form in water, so finding them proved Mars once had water."
+      },
+      {
+        "question": "What were the rovers made of, and what powered them?",
+        "options": [
+          "Six wheels, a camera head and a robot arm, powered by solar panels and batteries",
+          "Four legs, powered by a nuclear generator",
+          "Tank treads, powered by petrol",
+          "Wings, powered by the wind"
+        ],
+        "answer": "A",
+        "explanation": "Each rover had six wheels, cameras on a mast and a robot arm. Solar panels charged its batteries with sunlight."
+      },
+      {
+        "question": "When did Spirit blast off?",
+        "options": [
+          "10 June 2018, at 11:18 at night",
+          "3 January 2004, at 1:58 in the afternoon",
+          "10 June 1969, at 9:32 in the morning",
+          "10 June 2003, at 1:58 in the afternoon"
+        ],
+        "answer": "D",
+        "explanation": "Spirit launched on 10 June 2003. It landed on Mars about seven months later, in January 2004."
+      },
+      {
+        "question": "Why are the rovers still on Mars, and how long have they been there?",
+        "options": [
+          "Spirit got stuck in sand and dust covered Opportunity’s solar panels, and it’s been 22 years",
+          "They ran out of petrol, and it’s been 10 years",
+          "Astronauts are coming to collect them, and it’s been 5 years",
+          "They are still driving today, and it’s been 50 years"
+        ],
+        "answer": "A",
+        "explanation": "Spirit got stuck in soft sand, and a giant dust storm blocked Opportunity’s sunlight. They landed in 2004, 22 years ago."
+      }
+    ]
+  }
+}

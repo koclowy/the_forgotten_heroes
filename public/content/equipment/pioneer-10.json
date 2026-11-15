@@ -1,0 +1,144 @@
+{
+  "_help": "speaker: narrator (bottom panel) | scientist (Nova pops in; optional expression + body, see nova.json) | equipment (speech bubble). Add, delete or reorder lines freely. quiz.answer is the letter of the right option (A = first). image: the drawn art in the gold frame (no extension needed; {x} = the x1/x2/x3 folder). moreInfo.image: the real photo(s) in the \"i\" card, default assets/image/real_equipment/{x}/<id> (add <id>-1, <id>-2, … for a gallery); leave it empty to use the default. moreInfo.imageCredit: small credit under the photo. moreInfo.text: the summary paragraph. moreInfo.funFacts (optional): a list of short facts, one bullet each, e.g. [\"Fact one.\", \"Fact two.\"]. moreInfo.sources (optional): a list of web addresses (shown as the site name, e.g. NASA Science) or { \"label\": \"NASA Science: Viking 1\", \"url\": \"https://…\" }; links open in a new tab. Optional \"voice\": this equipment's voice file, e.g. assets/mp3/vocal/equipment/equipment_low_pitch (none = sounds.voices.equipment in assets.json). See README §4. Text formatting in any \"text\" or \"greeting\": <i>italic</i>, <b>bold</b>, <small>smaller</small>, <chorus>the other connected equipment speaking (own line, italic, smaller, faded, quieter voice)</chorus>, e.g. \"Hah, tell us about it. <chorus>Hmph… Can't believe them… We're still here! Still standing!</chorus>\". Optional \"chorusVoice\" on a line: another voice file for its <chorus> part. See README §2. Copy full examples from equipment/_examples/.",
+  "name": "Pioneer 10",
+  "image": "assets/image/equipment/{x}/pioneer-10",
+  "voice": "assets/mp3/vocal/equipment/equipment_normal",
+  "greeting": "Yawn... Good morning? I’m sure it’s morning somewhere.",
+  "script": [
+    {
+      "speaker": "narrator",
+      "text": "In 1972, NASA launched Pioneer 10 on an Atlas-Centaur rocket to become the first spacecraft ever to fly past Mars, through the asteroid belt and all the way to Jupiter."
+    },
+    {
+      "speaker": "narrator",
+      "text": "It was a small 258 kg probe with a big dish-shaped antenna and 11 science instruments, powered by two small nuclear generators because sunlight that far from the Sun is too weak for solar panels."
+    },
+    {
+      "speaker": "equipment",
+      "text": "I’m Pioneer 10. I’ve been drifting for a while, haven’t I?"
+    },
+    {
+      "speaker": "scientist",
+      "expression": "worried",
+      "body": "arm-down",
+      "text": "You have... It’s been over a decade since we last heard from you. What happened?"
+    },
+    {
+      "speaker": "equipment",
+      "text": "Pfft. I think I remember that. I’m surprised you even caught my signal after so long."
+    },
+    {
+      "speaker": "equipment",
+      "text": "I was originally sent for a Jupiter flyby. But after 30 years and crossing Neptune, my power ran out, and I’ve had all the time in the world to drift around."
+    },
+    {
+      "speaker": "narrator",
+      "text": "Its mission was to fly past Jupiter and study it up close, which it did in 1973, but it kept flying outward until its nuclear power faded, sending its last signal to Earth in 2003 as it drifted out of our solar system."
+    },
+    {
+      "speaker": "narrator",
+      "text": "It took about 500 pictures of Jupiter, including its Great Red Spot, and discovered that Jupiter’s magnetic field stretches so far it reaches all the way to Saturn’s orbit."
+    },
+    {
+      "speaker": "scientist",
+      "expression": "content",
+      "body": "point",
+      "text": "For what it’s worth, it’s an honour to meet you. You have no idea how proud us on Earth are of you."
+    },
+    {
+      "speaker": "equipment",
+      "text": "Gee, you flatter me..."
+    },
+    {
+      "speaker": "narrator",
+      "text": "Pioneer 10 launched from Cape Canaveral, Florida, at 8:49 p.m. on 1 March 1972 (already 2 March in world time), has been travelling for 54 years, and is now more than 17 billion km from Earth, heading towards the star Aldebaran."
+    },
+    {
+      "speaker": "equipment",
+      "text": "Oh, before you go, could you keep an eye out for my siblings? The other Pioneer probes, I mean. I haven’t heard from them in a while."
+    },
+    {
+      "speaker": "scientist",
+      "expression": "excited",
+      "body": "wave",
+      "text": "Of course! I hope we’ll see you around, 10."
+    }
+  ],
+  "moreInfo": {
+    "image": "",
+    "imageCredit": "Photo: NASA",
+    "text": "Pioneer 10 was NASA’s first mission to the outer planets. Launched in March 1972, it became the first spacecraft to cross the asteroid belt and fly past Jupiter, sending back about 500 pictures of the giant planet in 1973. It was only meant to last 21 months, but it kept working for more than 30 years. In 1983 it became the first human-made object to travel beyond Neptune. Its last signal reached Earth in January 2003, and it is still drifting out of our solar system today.",
+        "funFacts": [
+      "When it launched, Pioneer 10 was the fastest human-made object ever, reaching about 51,700 km/h.",
+      "It was the first spacecraft to fly through the asteroid belt, and it was hit by fewer space rocks than scientists expected.",
+      "It took the first close-up pictures of Jupiter’s moon Ganymede, and snapped Jupiter’s Great Red Spot.",
+      "Its very last signal, sent in 2003 from 12.23 billion km away, took 11 hours and 20 minutes to reach Earth.",
+      "It carries a metal plaque with drawings of a man and a woman and a map showing where Earth is, in case aliens ever find it!",
+      "It is heading towards Aldebaran, the red star that forms the “eye” of the Taurus constellation. It should pass it in about two million years.",
+      "Its sibling, Pioneer 11, flew past Jupiter and Saturn, and is also drifting out of our solar system."
+    ],
+    "sources": [
+      "https://science.nasa.gov/mission/pioneer-10/"
+    ]
+  },
+  "quiz": {
+    "points": 0,
+    "questions": [
+        {
+        "question": "What did Pioneer 10 discover about Jupiter?",
+        "options": [
+          "It has a solid rocky surface you can land on",
+          "It has rings made of gold",
+          "Its magnetic field stretches all the way to Saturn’s orbit",
+          "It is smaller than Earth"
+        ],
+        "answer": "C",
+        "explanation": "Pioneer 10 found that Jupiter’s huge magnetic tail reaches all the way out to Saturn’s orbit."
+      },
+       {
+        "question": "How did Pioneer 10 get into space?",
+        "options": [
+          "On an Atlas-Centaur rocket from Florida",
+          "On an Atlas V rocket from California",
+          "On a Titan rocket from Florida",
+          "Inside a Saturn V with astronauts"
+        ],
+        "answer": "A",
+        "explanation": "Pioneer 10 launched on an Atlas-Centaur rocket from Cape Canaveral, Florida. (An Atlas V from California carried InSight.)"
+      },
+      {
+        "question": "What was Pioneer 10 made of, and what powered it?",
+        "options": [
+          "A small probe with a big dish antenna, powered by two small nuclear generators",
+          "A probe covered in huge solar panels",
+          "A six-wheeled rover powered by batteries",
+          "A three-legged lander powered by solar panels"
+        ],
+        "answer": "A",
+        "explanation": "Pioneer 10 travelled so far from the Sun that solar panels wouldn’t work, so two small nuclear generators powered it."
+      },
+      {
+        "question": "When did Pioneer 10 blast off?",
+        "options": [
+          "16 July 1969, at 9:32 in the morning",
+          "4 December 1973, the day it passed Jupiter",
+          "23 January 2003, when its last signal arrived",
+          "1 March 1972, at 8:49 in the evening (Florida time)"
+        ],
+        "answer": "D",
+        "explanation": "It launched at 8:49 p.m. Florida time on 1 March 1972, which was already 2 March in world time. It passed Jupiter in 1973."
+      },
+      {
+        "question": "Why is Pioneer 10 still out in space, and how long has it been travelling?",
+        "options": [
+          "It flew past Jupiter and kept going until its power faded, and it’s been travelling 54 years",
+          "It got stuck in sand on Mars, and it’s been 22 years",
+          "It landed on Jupiter, and it’s been 10 years",
+          "Astronauts brought it home, and it’s been 30 years"
+        ],
+        "answer": "A",
+        "explanation": "After its Jupiter flyby it kept flying outward, and it’s still drifting out of the solar system today, 54 years after launch!"
+      }
+    ]
+  }
+}

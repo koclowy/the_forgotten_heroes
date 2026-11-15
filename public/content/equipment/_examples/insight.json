@@ -1,0 +1,50 @@
+{
+  "_help": "speaker: narrator (bottom panel) | scientist (Nova pops in; optional expression + body, see nova.json) | equipment (speech bubble). Add, delete or reorder lines freely. quiz.answer is the letter of the right option (A = first). image: no extension needed (jpg/png/webp all work); {x} = the x1/x2/x3 resolution folder. Optional \"voice\": a folder of mp3 blips just for this equipment, e.g. \"assets/mp3/vocal/insight/\".",
+  "name": "InSight Lander",
+  "image": "assets/image/equipment/{x}/insight",
+  "greeting": "I am… InSight. I listened to the heartbeat of Mars.",
+  "script": [
+    {
+      "speaker": "narrator",
+      "text": "InSight landed on Mars in November 2018 to study what's deep inside the planet."
+    },
+    {
+      "speaker": "equipment",
+      "text": "I'm a lander, so I never moved. I just listened very carefully."
+    },
+    {
+      "speaker": "scientist",
+      "expression": "confused",
+      "body": "arm-down",
+      "text": "Listened to what?"
+    },
+    {
+      "speaker": "equipment",
+      "text": "Marsquakes! My seismometer felt Mars shaking."
+    },
+    {
+      "speaker": "narrator",
+      "text": "Its recordings helped scientists map the crust, mantle and core of Mars. Dust slowly covered its solar panels, and the mission ended in December 2022."
+    }
+  ],
+  "moreInfo": {
+    "image": "",
+    "text": "Studying how quake waves travel through a planet tells scientists what its insides are made of, the same way doctors use ultrasound to see inside the body."
+  },
+  "quiz": {
+    "points": 10,
+    "questions": [
+      {
+        "question": "What did InSight's seismometer detect?",
+        "options": [
+          "Marsquakes",
+          "Alien radio signals",
+          "Underground rivers",
+          "Meteor showers"
+        ],
+        "answer": "A",
+        "explanation": "InSight recorded marsquakes, which revealed the planet's inner layers."
+      }
+    ]
+  }
+}

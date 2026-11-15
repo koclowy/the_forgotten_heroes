@@ -1,0 +1,154 @@
+{
+  "_help": "speaker: narrator (bottom panel) | scientist (Nova pops in; optional expression + body, see nova.json) | equipment (speech bubble). Add, delete or reorder lines freely. quiz.answer is the letter of the right option (A = first). image: the drawn art in the gold frame (no extension needed; {x} = the x1/x2/x3 folder). moreInfo.image: the real photo(s) in the \"i\" card, default assets/image/real_equipment/{x}/<id> (add <id>-1, <id>-2, … for a gallery); leave it empty to use the default. moreInfo.imageCredit: small credit under the photo. moreInfo.text: the summary paragraph. moreInfo.funFacts (optional): a list of short facts, one bullet each, e.g. [\"Fact one.\", \"Fact two.\"]. moreInfo.sources (optional): a list of web addresses (shown as the site name, e.g. NASA Science) or { \"label\": \"NASA Science: Viking 1\", \"url\": \"https://…\" }; links open in a new tab. Optional \"voice\": this equipment's voice file, e.g. assets/mp3/vocal/equipment/equipment_low_pitch (none = sounds.voices.equipment in assets.json). See README §4. Text formatting in any \"text\" or \"greeting\": <i>italic</i>, <b>bold</b>, <small>smaller</small>, <chorus>the other connected equipment speaking (own line, italic, smaller, faded, quieter voice)</chorus>, e.g. \"Hah, tell us about it. <chorus>Hmph… Can't believe them… We're still here! Still standing!</chorus>\". Optional \"chorusVoice\" on a line: another voice file for its <chorus> part. See README §2. Copy full examples from equipment/_examples/.",
+  "name": "InSight Lander",
+  "image": "assets/image/equipment/{x}/insight-lander",
+  "voice": "assets/mp3/vocal/equipment/equipment_normal",
+  "greeting": "... ... ...",
+  "script": [
+    {
+      "speaker": "equipment",
+      "text": "... ... ..."
+    },
+    {
+      "speaker": "scientist",
+      "expression": "laughing",
+      "body": "wave",
+      "text": "Heya! Whats-"
+    },
+    {
+      "speaker": "equipment",
+      "text": "Shhhhhhhh."
+    },
+    {
+      "speaker": "scientist",
+      "expression": "confused",
+      "body": "arm-down",
+      "text": "...?"
+    },
+    {
+      "speaker": "equipment",
+      "text": "...You may call me InSight. As you were saying?."
+    },
+    {
+      "speaker": "narrator",
+      "text": "In 2018, NASA launched InSight on an Atlas V rocket from California, the first mission ever sent to study what’s deep inside Mars."
+    },
+    {
+      "speaker": "narrator",
+      "text": "It was a three-legged lander with a long robot arm, a super-sensitive quake detector and a heat probe, powered by two round solar panels that soaked up sunlight."
+    },
+    {
+      "speaker": "scientist",
+      "expression": "curious",
+      "body": "arm-down",
+      "text": "What are you doing? And why do I have to be quiet...?"
+    },
+    {
+      "speaker": "equipment",
+      "text": "Ahh, a curious one."
+    },
+    {
+      "speaker": "equipment",
+      "text": "I listen to the heartbeat of this planet. Every little quake of its surface. I study what makes Mars… Mars. The wind clears the dust off my panels, and I wait patiently."
+    },
+    {
+      "speaker": "narrator",
+      "text": "Its mission was to measure Mars’s marsquakes, heat and wobble while staying perfectly still, until dust slowly covered its solar panels and it ran out of power in December 2022."
+    },
+    {
+      "speaker": "narrator",
+      "text": "It recorded more than 1,300 marsquakes and the sound of Martian wind, which let scientists measure the size of Mars’s crust, mantle and liquid metal core for the first time."
+    },
+    {
+      "speaker": "scientist",
+      "expression": "surprised",
+      "body": "arm-down",
+      "text": "That’s… so cool… I won’t disturb you anymore..."
+    }, 
+    {
+      "speaker": "equipment",
+      "text": "Huhu, please, you can speak a little louder than that. It's no problem at all."
+    },
+        {
+      "speaker": "narrator",
+      "text": "InSight launched from Vandenberg, California, on 5 May 2018 at 4:05 a.m. local time, flew about 485 million km, landed on 26 November 2018 on a flat plain called Elysium Planitia, and has now been on Mars for 8 years."
+    }
+  ],
+  "moreInfo": {
+    "image": "",
+    "imageCredit": "Photo: NASA",
+    "text": "InSight was a NASA lander built to study the inside of Mars: its crust, mantle and core. It launched in May 2018 and landed in November 2018 on Elysium Planitia, a flat, safe plain near the equator. Its robot arm placed a super-sensitive seismometer and a heat probe on the ground, like a doctor checking the planet’s pulse, temperature and reflexes. Over four years it recorded more than a thousand marsquakes, until dust on its solar panels ended the mission in December 2022.",
+    "funFacts": [
+      "InSight was the first NASA mission to another planet ever launched from the West Coast of the USA.",
+      "Its seismometer felt more than 1,300 marsquakes, showing that Mars is still shaking today.",
+      "InSight recorded the sound of the wind on Mars, a low rumble from winds blowing at about 10 to 15 mph.",
+      "Its robot arm was 1.8 metres long, longer than most grown-ups are tall!",
+      "Two briefcase-sized mini spacecraft called MarCO flew to Mars alongside it, the first tiny CubeSats ever sent to another planet.",
+      "Its heat probe, nicknamed “the mole”, was meant to dig deep underground, but the Martian soil clumped together and it couldn’t get a grip.",
+      "Its marsquake data showed that the inside of Mars is lumpy, full of chunks of rock from ancient impacts."
+    ],
+    "sources": [
+      "https://science.nasa.gov/mission/insight/"
+    ]
+  },
+  "quiz": {
+    "points": 10,
+    "questions": [
+            {
+        "question": "How did InSight get to Mars?",
+        "options": [
+          "On a Titan rocket launched from Florida",
+          "On an Atlas V rocket launched from California",
+          "On two Delta II rockets",
+          "Inside a Saturn V with astronauts"
+        ],
+        "answer": "B",
+        "explanation": "InSight launched on an Atlas V rocket from Vandenberg in California. (A Titan rocket from Florida carried Viking 1.)"
+      },
+      {
+        "question": "What was InSight made of, and what powered it?",
+        "options": [
+          "A small battery-powered car",
+          "A six-wheeled rover powered by a nuclear generator",
+          "A three-legged lander with a robot arm and a quake detector, powered by solar panels",
+          "An orbiter powered by the wind"
+        ],
+        "answer": "C",
+        "explanation": "InSight was a lander with three legs, a long robot arm and science instruments, powered by two round solar panels."
+      },
+      {
+        "question": "What did InSight’s marsquake data let scientists measure for the first time?",
+        "options": [
+          "The height of Mars’s tallest mountain",
+          "How many moons Mars has",
+          "The size of Mars’s crust, mantle and core",
+          "The colour of Mars’s sky"
+        ],
+        "answer": "C",
+        "explanation": "Marsquake waves travel through the planet, so they revealed the size of its crust, mantle and liquid metal core."
+      },
+      {
+        "question": "When did InSight blast off?",
+        "options": [
+          "5 May 2008, at 4:05 in the morning",
+          "26 November 2018, at 11:52 in the morning",
+          "20 August 1975, at 5:22 in the evening",
+          "5 May 2018, at 4:05 in the morning"
+        ],
+        "answer": "D",
+        "explanation": "InSight launched on 5 May 2018 at 4:05 a.m. California time. 26 November 2018 was the day it landed."
+      },
+      {
+        "question": "Why is InSight still on Mars, and how long has it been there?",
+        "options": [
+          "It was built to stay still and listen, until dust covered its solar panels, and it’s been 8 years",
+          "It got stuck in sand while driving, and it’s been 22 years",
+          "A wrong command from Earth cut it off, and it’s been 50 years",
+          "Astronauts switched it off, and it’s been 3 years"
+        ],
+        "answer": "A",
+        "explanation": "InSight never moved. Dust slowly covered its solar panels until it ran out of power in 2022. It landed in 2018, 8 years ago."
+      }
+    ]
+  }
+}
